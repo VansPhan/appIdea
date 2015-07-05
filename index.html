@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="waterCooler">
+<head>
+	<title>WaterCooler</title>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- AngularJS -->
+<script type="text/javascript" src="ng/angular.min.js"></script>
+<!-- Bootstrap & Jquery-->
+<script type="text/javascript" src="ng/jquery.min.js"></script>
+<script type="text/javascript" src="ng/bootstrap.min.js"></script>
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+	<blockquote>
+		<p> {{ form.email }} </p>
+		<p> {{ form.description }} </p>
+
+	</blockquote>
+
+	<form ng-controller="IdeaController as ideaCtrl" ng-submit="ideaCtrl.addIdea(product)">
+		<fieldset class="form-group">
+        <input ng-model="form.email" type="email" class="form-control" placeholder="user@email.com" title="Email" />
+        </fieldset>
+		<fieldset class="form-group">
+		<textarea ng-model="form.description" class="form-control" placeholder="Write a short description for your idea..." title="Description"></textarea>
+		</fieldset>
+        <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Submit Idea" />
+        </fieldset>
+	</form>
+</div>
+
+</body>
+</html>
